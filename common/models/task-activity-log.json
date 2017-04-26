@@ -1,0 +1,56 @@
+{
+  "name": "task_activity_log",
+  "plural": "activityLogs",
+  "base": "PersistedModel",
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "dashdb": {
+    "schema": "BLUADMIN",
+    "table": "TASK_ACTIVITY_LOGS"
+  },
+  "properties": {
+    "activityType": {
+      "type": "number",
+      "required": false,
+      "dashdb": {
+        "columnName": "ACTIVITYTYPE"
+      }
+    },
+    "createdDate": {
+      "type": "date",
+      "required": false,
+      "dashdb": {
+        "columnName": "CREATEDDATE"
+      }
+    },
+    "createdBy": {
+      "type": "string",
+      "required": false,
+      "dashdb": {
+        "columnName": "CREATEDBY"
+      }
+    },
+    "taskCode": {
+      "type": "string",
+      "id": true,
+      "required": true,
+      "dashdb": {
+        "columnName": "TASKCODE"
+      },
+      "isArray": false
+    },
+    "description": {
+      "type": "string",
+      "required": true,
+      "dashdb": {
+        "columnName": "DESCRIPTION"
+      }
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

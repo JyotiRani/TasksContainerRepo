@@ -1,0 +1,49 @@
+{
+  "name": "task_outputs",
+  "plural": "taskOutputs",
+  "base": "PersistedModel",
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "dashdb": {
+    "schema": "BLUADMIN",
+    "table": "TASK_OUTPUTS"
+  },
+  "properties": {
+    "output_key": {
+      "type": "string",
+      "required": true,
+      "dashdb": {
+        "columnName": "OUTPUT_KEY"
+      }
+    },
+    "output_value": {
+      "type": "string",
+      "required": true,
+      "dashdb": {
+        "columnName": "OUTPUT_VALUE"
+      }
+    },
+    "taskCode": {
+      "type": "string",
+      "id": true,
+      "required": true,
+      "dashdb": {
+        "columnName": "TASKCODE"
+      },
+      "isArray": false
+    },
+    "visibility": {
+      "type": "number",
+      "required": false,
+      "dashdb": {
+        "columnName": "VISIBILITY"
+      }
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

@@ -1,0 +1,81 @@
+type: bluemix
+server:
+  displayName: US South
+  name: us-south
+  host: us.apiconnect.ibmcloud.com
+org:
+  id: 58ca6a250cf2453d6389ea8e
+  name: kgambhirinibmcom-jyoti
+  displayName: kgambhir@in.ibm.com (jyoti)
+  orgType: apiProvider
+  status: active
+  advPortalOverride: true
+  extUaaAuthenticated: false
+  requiresSSLClientCertCheck: false
+  dormant: false
+  url: 'https://us.apiconnect.ibmcloud.com/v1/orgs/58ca6a250cf2453d6389ea8e'
+  externalOrgId: c356934c-0987-46f2-9d6e-c7d5dd4aea34
+  externalInviteOverride: 'https://console.ng.bluemix.net/apis/catalog/invitation'
+  externalSpaceId: c356934c-0987-46f2-9d6e-c7d5dd4aea34
+  externalNativeOrgId: 4cdd78dd-a60b-4b96-bba3-7d5bd37cee24
+  bluemix:
+    inviteUri: 'https://console.ng.bluemix.net/apis/catalog/invitation'
+    organization: 4cdd78dd-a60b-4b96-bba3-7d5bd37cee24
+    space: c356934c-0987-46f2-9d6e-c7d5dd4aea34
+catalog:
+  id: 58ca6a250cf2453d6389ea9a
+  orgId: 58ca6a250cf2453d6389ea8e
+  name: Sandbox
+  shortName: sb
+  owner:
+    id: 57455dfd0cf2578284209fc9
+    username: kgambhir@in.ibm.com
+    context: apimanager
+    idpId: 58341db4e63b1219f0f068d1
+    email: kgambhir@in.ibm.com
+    firstName: kgambhir@in.ibm.com
+    lastName: ''
+    status: ACTIVE
+    lastLoginTime: '2016-05-26T06:22:30.734+0000'
+    url: 'https://us.apiconnect.ibmcloud.com/v1/users/57455dfd0cf2578284209fc9'
+  apiCenter: false
+  baseUrl: 'https://api.us.apiconnect.ibmcloud.com/kgambhirinibmcom-jyoti/sb'
+  portalType: ADVANCED
+  portalUrl: 'https://developer.us.apiconnect.ibmcloud.com/kgambhirinibmcom-jyoti/sb'
+  customPortalUrl: 'https://developer.us.apiconnect.ibmcloud.com/kgambhirinibmcom-jyoti/sb'
+  advPortalUrl: 'https://sb-kgambhirinibmcom-jyoti.developer.us.apiconnect.ibmcloud.com'
+  gatewayType: DataPowerGateway
+  idp: 58ca6a270cf2453d6389ea9b
+  idps:
+    - 58ca6a270cf2453d6389ea9b
+  availableRoles:
+    - viewer
+    - developer
+  default: false
+  autoDeploy: true
+  gatewayClusterUrl: /gatewayClusters/PRODAPIC_APIMGMT_GATEWAY
+  restrictedDeployment: false
+  invitationEnabled: true
+  selfSignUpEnabled: true
+  spaceEnabled: false
+  spaceIds:
+    - 58ca6a270cf2453d6389eaa3
+  testAppEnabled: true
+  testAppCredentials:
+    clientId: 48866144-ce04-4de9-a4b3-be2ac3eac413
+    clientSecret: H0yP8sG8wH3fY6pQ3gT2sD8vS8pH7mJ2uL4eB8dC7gJ4oK0oT8
+  createdAt: '2017-03-16T10:34:15.162+0000'
+  updatedAt: '2017-03-31T05:01:43.166+0000'
+  createdBy: apim-ops@wwpdl.vnet.ibm.com
+  updatedBy: jyotirani10@in.ibm.com
+  url: >-
+    https://us.apiconnect.ibmcloud.com/v1/orgs/58ca6a250cf2453d6389ea8e/environments/58ca6a250cf2453d6389ea9a
+  productDeploymentApprovalRequiredStates: []
+  orgName: kgambhirinibmcom-jyoti
+space:
+  none: true
+app:
+  new: true
+  name: tasksdashdbrest
+id: 980c4bb4-5411-4864-808b-548256632778
+target: 1.0.0

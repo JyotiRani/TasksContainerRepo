@@ -1,0 +1,12 @@
+{
+  "tasks": {
+    "host": "dashdb-txn-small-yp-dal09-114.services.dal.bluemix.net",
+    "port": 50000,
+    "database": "BLUDB",
+    "password": "YTg3YTYxZmE1ZGIz",
+    "name": "tasks",
+    "dsn": "DATABASE=BLUDB;HOSTNAME=dashdb-txn-small-yp-dal09-114.services.dal.bluemix.net;PORT=50000;PROTOCOL=TCPIP;UID=bluadmin;PWD=YTg3YTYxZmE1ZGIz;",
+    "user": "bluadmin",
+    "connector": "dashdb"
+  }
+}

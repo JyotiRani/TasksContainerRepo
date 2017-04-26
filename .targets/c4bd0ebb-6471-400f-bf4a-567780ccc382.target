@@ -1,0 +1,79 @@
+type: bluemix
+server:
+  displayName: US South
+  name: us-south
+  host: us.apiconnect.ibmcloud.com
+org:
+  id: 58ee02d00cf22977dd6f45e7
+  name: hcl-exploration-dev
+  displayName: HCL-Exploration (dev)
+  orgType: apiProvider
+  status: active
+  advPortalOverride: true
+  extUaaAuthenticated: false
+  requiresSSLClientCertCheck: false
+  dormant: false
+  url: 'https://us.apiconnect.ibmcloud.com/v1/orgs/58ee02d00cf22977dd6f45e7'
+  externalOrgId: e930f44b-2dbf-4488-8a40-e842cd2da45e
+  externalInviteOverride: 'https://console.ng.bluemix.net/apis/catalog/invitation'
+  externalSpaceId: e930f44b-2dbf-4488-8a40-e842cd2da45e
+  externalNativeOrgId: 57af8cf4-69ae-4633-9dc9-fbcbf3a712cc
+  bluemix:
+    inviteUri: 'https://console.ng.bluemix.net/apis/catalog/invitation'
+    organization: 57af8cf4-69ae-4633-9dc9-fbcbf3a712cc
+    space: e930f44b-2dbf-4488-8a40-e842cd2da45e
+catalog:
+  id: 58ee02d00cf22977dd6f45f3
+  orgId: 58ee02d00cf22977dd6f45e7
+  name: Sandbox
+  shortName: sb
+  owner:
+    id: 586b72810cf24238d0e02719
+    username: monika-r@hcl.com
+    context: apimanager
+    idpId: 58341db4e63b1219f0f068d1
+    email: monika-r@hcl.com
+    firstName: monika-r@hcl.com
+    lastName: ''
+    status: ACTIVE
+    url: 'https://us.apiconnect.ibmcloud.com/v1/users/586b72810cf24238d0e02719'
+  apiCenter: false
+  baseUrl: 'https://api.us.apiconnect.ibmcloud.com/hcl-exploration-dev/sb'
+  portalType: BASIC
+  portalUrl: 'https://developer.us.apiconnect.ibmcloud.com/hcl-exploration-dev/sb'
+  advPortalUrl: 'https://sb-hcl-exploration-dev.developer.us.apiconnect.ibmcloud.com'
+  gatewayType: DataPowerGateway
+  idp: 58ee02d10cf22977dd6f45f4
+  idps:
+    - 58ee02d10cf22977dd6f45f4
+  availableRoles:
+    - developer
+    - viewer
+  default: false
+  autoDeploy: true
+  gatewayClusterUrl: /gatewayClusters/PRODAPIC_APIMGMT_GATEWAY
+  restrictedDeployment: false
+  invitationEnabled: true
+  selfSignUpEnabled: true
+  spaceEnabled: false
+  spaceIds:
+    - 58ee02d10cf22977dd6f45fc
+  testAppEnabled: true
+  testAppCredentials:
+    clientId: b56cce80-a3fc-4194-87d7-edddb4d3bd28
+    clientSecret: sE3tI5gM0pX6aD7dU4dE4lE6rM5gB7sD6lO1nE0eH2cJ0uK1tY
+  createdAt: '2017-04-12T10:34:57.931+0000'
+  updatedAt: '2017-04-12T10:34:57.931+0000'
+  createdBy: apim-ops@wwpdl.vnet.ibm.com
+  updatedBy: apim-ops@wwpdl.vnet.ibm.com
+  url: >-
+    https://us.apiconnect.ibmcloud.com/v1/orgs/58ee02d00cf22977dd6f45e7/environments/58ee02d00cf22977dd6f45f3
+  productDeploymentApprovalRequiredStates: []
+  orgName: hcl-exploration-dev
+space:
+  none: true
+app:
+  new: true
+  name: tasksrest
+id: c4bd0ebb-6471-400f-bf4a-567780ccc382
+target: 1.0.0

@@ -1,0 +1,42 @@
+{
+  "name": "task_relations",
+  "plural": "relations",
+  "base": "PersistedModel",
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "dashdb": {
+    "schema": "BLUADMIN",
+    "table": "TASK_RELATIONSHIPS"
+  },
+  "properties": {
+    "related_item_type": {
+      "type": "string",
+      "required": true,
+      "dashdb": {
+        "columnName": "RELATEDITEMTYPE"
+      }
+    },
+    "related_item_code": {
+      "type": "string",
+      "required": true,
+      "dashdb": {
+        "columnName": "RELATEDITEMCODE"
+      }
+    },
+    "taskCode": {
+      "type": "string",
+      "id": true,
+      "required": true,
+      "dashdb": {
+        "columnName": "TASKCODE"
+      },
+      "isArray": false
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

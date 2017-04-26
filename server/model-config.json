@@ -1,0 +1,40 @@
+{
+  "_meta": {
+    "sources": [
+      "loopback/common/models",
+      "loopback/server/models",
+      "../common/models",
+      "./models"
+    ],
+    "mixins": [
+      "loopback/common/mixins",
+      "loopback/server/mixins",
+      "../common/mixins",
+      "./mixins"
+    ]
+  },
+  "tasks": {
+    "dataSource": "tasks",
+    "public": true
+  },
+  "task_outputs": {
+    "dataSource": "tasks",
+    "public": true
+  },
+  "task_relations": {
+    "dataSource": "tasks",
+    "public": true
+  },
+  "task_activity_log": {
+    "dataSource": "tasks",
+    "public": true
+  },
+  "task_templates": {
+    "dataSource": "tasks",
+    "public": true
+  },
+  "status_rules": {
+    "dataSource": "tasks",
+    "public": true
+  }
+}

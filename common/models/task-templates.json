@@ -1,0 +1,66 @@
+{
+  "name": "task_templates",
+  "plural": "templates",
+  "base": "PersistedModel",
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "dashdb": {
+    "schema": "BLUADMIN",
+    "table": "TASK_TEMPLATES"
+  },
+  "properties": {
+    "assignedTo": {
+      "type": "number",
+      "required": false,
+      "dashdb": {
+        "columnName": "ASSIGNEDTO"
+      },
+      "isArray": false
+    },
+    "assignedToGroup": {
+      "type": "number",
+      "required": false,
+      "dashdb": {
+        "columnName": "ASSIGNEDTOGROUP"
+      },
+      "isArray": false
+    },
+    "description": {
+      "type": "string",
+      "required": true,
+      "dashdb": {
+        "columnName": "DESCRIPTION"
+      }
+    },
+    "name": {
+      "type": "string",
+      "id": true,
+      "required": true,
+      "index": false,
+      "dashdb": {
+        "columnName": "NAME"
+      },
+      "isArray": false
+    },
+    "sequenceNumber": {
+      "type": "number",
+      "required": true,
+      "dashdb": {
+        "columnName": "SEQUENCENUMBER"
+      }
+    },
+    "sequenceType": {
+      "type": "string",
+      "required": true,
+      "dashdb": {
+        "columnName": "SEQUENCETYPE"
+      }
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

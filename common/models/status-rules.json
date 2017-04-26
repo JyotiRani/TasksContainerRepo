@@ -1,0 +1,37 @@
+{
+  "name": "status_rules",
+  "plural": "statusRules",
+  "base": "PersistedModel",
+   "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "dashdb": {
+    "schema": "BLUADMIN",
+    "table": "TASK_STATUS_RULES"
+  },
+  "properties": {
+    "current_status": {
+      "type": "number",
+	  "id": true,
+      "required": false,
+      "dashdb": {
+        "columnName": "CURRENT_STATUS"
+      },
+      "isArray": false
+    },
+    "next_status": {
+      "type": "number",
+      "required": false,
+      "dashdb": {
+        "columnName": "NEXT_STATUS"
+      },
+      "isArray": false
+    }
+  
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

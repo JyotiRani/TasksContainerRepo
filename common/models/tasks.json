@@ -1,0 +1,143 @@
+{
+  "name": "tasks",
+  "plural": "tasks",
+  "base": "PersistedModel",
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "dashdb": {
+    "schema": "BLUADMIN",
+    "table": "TASKS"
+  },
+  "properties": {
+    "assignedTo": {
+      "type": "number",
+      "required": false,
+      "dashdb": {
+        "columnName": "ASSIGNEDTO"
+      },
+      "isArray": false
+    },
+    "assignedToGroup": {
+      "type": "number",
+      "required": false,
+      "dashdb": {
+        "columnName": "ASSIGNEDTOGROUP"
+      },
+      "isArray": false
+    },
+    "crearedBy": {
+      "type": "string",
+      "required": false,
+      "dashdb": {
+        "columnName": "CREATEDBY"
+      },
+      "isArray": false
+    },
+    "createdDate": {
+      "type": "date",
+      "required": false,
+      "dashdb": {
+        "columnName": "CREATEDDATE"
+      },
+      "isArray": false
+    },
+    "description": {
+      "type": "string",
+      "required": true,
+      "dashdb": {
+        "columnName": "DESCRIPTION"
+      }
+    },
+    "dueDate": {
+      "type": "date",
+      "required": false,
+      "dashdb": {
+        "columnName": "DUEDATE"
+      },
+      "isArray": false
+    },
+    "lastModificationDate": {
+      "type": "date",
+      "required": false,
+      "dashdb": {
+        "columnName": "LASTMODIFICATIONDATE"
+      },
+      "isArray": false
+    },
+    "modifiedBy": {
+      "type": "string",
+      "required": false,
+      "dashdb": {
+        "columnName": "MODIFIEDBY"
+      },
+      "isArray": false
+    },
+    "sequenceNumber": {
+      "type": "number",
+      "required": true,
+      "dashdb": {
+        "columnName": "SEQUENCENUMBER"
+      }
+    },
+    "sequenceType": {
+      "type": "string",
+      "required": true,
+      "dashdb": {
+        "columnName": "SEQUENCETYPE"
+      }
+    },
+    "startDate": {
+      "type": "date",
+      "required": false,
+      "dashdb": {
+        "columnName": "STARTDATE"
+      },
+      "isArray": false
+    },
+    "statusId": {
+      "type": "number",
+      "required": false,
+      "dashdb": {
+        "columnName": "STATUSID"
+      }
+    },
+    "taskCode": {
+      "type": "string",
+      "id": true,
+      "required": true,
+      "dashdb": {
+        "columnName": "TASKCODE"
+      },
+      "isArray": false
+    },
+    "workItemId": {
+      "type": "number",
+      "required": false,
+      "dashdb": {
+        "columnName": "WORKITEMID"
+      }
+    }
+  },
+  "validations": [],
+  "relations": {
+    "outputs": {
+      "type": "hasMany",
+      "model": "task_outputs",
+      "foreignKey": "taskCode"
+    },
+    "relations": {
+      "type": "hasMany",
+      "model": "task_relations",
+      "foreignKey": "taskCode"
+    },
+    "activityLogs": {
+      "type": "hasMany",
+      "model": "task_activity_log",
+      "foreignKey": "taskCode"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
