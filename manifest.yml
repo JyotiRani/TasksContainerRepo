@@ -4,7 +4,7 @@ applications:
   instances: 1
   domain: mybluemix.net
   name: tasksrest
-  host: tasksrest
+  host: tasksrestnew
   disk_quota: 1024M
 env:
   NODE_ENV: bluemix

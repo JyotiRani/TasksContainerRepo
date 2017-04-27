@@ -2686,27 +2686,60 @@ x-ibm-configuration:
         invoke-tls-profile: 'client:Loopback-client'
   assembly:
     execute:
-      - invoke:
-          title: invoke
-          timeout: 60
-          verb: GET
-          cache-response: protocol
-          cache-ttl: 900
-          stop-on-error:
-            - null
+      - switch:
+          title: switch
+          case:
+            - condition: "apim.getvariable('request.verb') == 'GET'"
+              execute:
+                - invoke:
+                    title: invoke
+                    timeout: 60
+                    verb: GET
+                    cache-response: protocol
+                    cache-ttl: 900
+                    stop-on-error:
+                      - null
+                    version: 1.0.0
+                    target-url: $(runtime-url)$(request.path)$(request.search)
+                    tls-profile: $(invoke-tls-profile)
+            - condition: "apim.getvariable('request.verb') == 'POST'"
+              execute:
+                - invoke:
+                    title: invoke
+                    timeout: 60
+                    verb: POST
+                    cache-response: protocol
+                    cache-ttl: 900
+                    stop-on-error:
+                      - null
+                    version: 1.0.0
+                    target-url: $(runtime-url)$(request.path)$(request.search)
+            - condition: "apim.getvariable('request.verb') == 'PUT'"
+              execute:
+                - invoke:
+                    title: invoke
+                    timeout: 60
+                    verb: PUT
+                    cache-response: protocol
+                    cache-ttl: 900
+                    stop-on-error:
+                      - null
+                    version: 1.0.0
+                    target-url: $(runtime-url)$(request.path)$(request.search)
+            - condition: "apim.getvariable('request.verb') == 'PATCH'"
+              execute:
+                - invoke:
+                    title: invoke
+                    timeout: 60
+                    verb: PATCH
+                    cache-response: protocol
+                    cache-ttl: 900
+                    stop-on-error:
+                      - null
+                    version: 1.0.0
+                    target-url: $(runtime-url)$(request.path)$(request.search)
           version: 1.0.0
-          target-url: $(runtime-url)$(request.path)$(request.search)
-          tls-profile: $(invoke-tls-profile)
-    catch:
-      - errors:
-          - JavaScriptError
-        execute: []
-      - errors:
-          - ConnectionError
-        execute: []
-      - errors:
-          - RuntimeError
-        execute: []
+    catch: []
   properties:
     runtime-url:
       value: ''

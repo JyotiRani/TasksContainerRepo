@@ -3,7 +3,7 @@ var app = require('../../server/server');
 
 module.exports = function(Tasks) {
 
-var re = /^[a-zA-Z0-9]*$/;
+var re = /^[a-zA-Z0-9]{1,20}$/;
 Tasks.validatesInclusionOf('statusId', {'in':[1,2,3,4]});
 Tasks.validatesFormatOf('taskCode', {with: re});
 Tasks.validatesInclusionOf('sequenceType', {'in':['Sequential','Parallel']});
@@ -120,12 +120,16 @@ Tasks.observe('after save', function(ctx, next) {
 Tasks.saveAll = function(task, cb) {
 	var outputs;
 	var relations;
+	var activityLogs;
 	if(task != undefined) {
 		if(task.outputs != undefined) {
 			outputs = task.outputs;
 		}
 		if(task.relations != undefined) {
 			relations = task.relations;
+		}
+		if(task.activityLogs != undefined) {
+			activityLogs = task.activityLogs;
 		}
 
 		Tasks.create(task, function(err, instance) {
@@ -154,6 +158,17 @@ Tasks.saveAll = function(task, cb) {
 						}
 					});
 				}
+				if (activityLogs != undefined)	{
+					Tasks.app.models.task_activity_log.create(activityLogs, function(err, data) {
+						if (err) {
+							console.error(err);
+							cb(err);
+						} else {
+							console.log('activityLogs has been created %s', data);			
+						}
+					});
+				}
+
 				cb(null, instance);
 			}
 		});
