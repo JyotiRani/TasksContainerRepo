@@ -1,3 +1,4 @@
+<<<<<<< Upstream, based on 833741f164beb5d4c499a1f4cf3ecd46d292d0ec
 *.csv
 *.dat
 *.iml
@@ -17,3 +18,6 @@
 coverage
 node_modules
 npm-debug.log
+=======
+launchConfigurations/
+>>>>>>> 6ef2a11 initial
