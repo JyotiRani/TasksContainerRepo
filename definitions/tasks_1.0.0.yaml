@@ -1,20 +1,13 @@
-product: '1.0.0'
-
+product: 1.0.0
 info:
-  name: tasks2
-  title: tasks2
+  name: tasks
+  title: tasks
   version: 1.0.0
-
-apis:
-  'tasks2':
-    $ref: tasks2.yaml
-
 visibility:
   view:
     type: public
   subscribe:
     type: authenticated
-
 plans:
   default:
     title: Default Plan
@@ -23,3 +16,6 @@ plans:
     rate-limit:
       value: 100/hour
       hard-limit: false
+apis:
+  tasksrest:
+    $ref: tasksrest.yaml
