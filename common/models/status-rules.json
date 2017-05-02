@@ -2,7 +2,7 @@
   "name": "status_rules",
   "plural": "statusRules",
   "base": "PersistedModel",
-   "idInjection": false,
+  "idInjection": false,
   "options": {
     "validateUpsert": true
   },
@@ -13,7 +13,7 @@
   "properties": {
     "current_status": {
       "type": "number",
-	  "id": true,
+      "id": true,
       "required": false,
       "dashdb": {
         "columnName": "CURRENT_STATUS"
@@ -28,7 +28,6 @@
       },
       "isArray": false
     }
-  
   },
   "validations": [],
   "relations": {},

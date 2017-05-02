@@ -1,0 +1,3292 @@
+paths:
+  '/tasks/{id}/outputs/{fk}':
+    get:
+      tags:
+        - tasks
+      summary: Find a related item by id for outputs.
+      operationId: tasks.prototype.__findById__outputs
+      parameters:
+        - name: fk
+          in: path
+          description: Foreign key for outputs
+          required: true
+          type: string
+          format: JSON
+        - name: id
+          in: path
+          description: tasks id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/task_outputs'
+      deprecated: false
+    delete:
+      tags:
+        - tasks
+      summary: Delete a related item by id for outputs.
+      operationId: tasks.prototype.__destroyById__outputs
+      parameters:
+        - name: fk
+          in: path
+          description: Foreign key for outputs
+          required: true
+          type: string
+          format: JSON
+        - name: id
+          in: path
+          description: tasks id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '204':
+          description: Request was successful
+      deprecated: false
+    put:
+      tags:
+        - tasks
+      summary: Update a related item by id for outputs.
+      operationId: tasks.prototype.__updateById__outputs
+      parameters:
+        - name: fk
+          in: path
+          description: Foreign key for outputs
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          required: false
+          schema:
+            $ref: '#/definitions/task_outputs'
+        - name: id
+          in: path
+          description: tasks id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/task_outputs'
+      deprecated: false
+  '/tasks/{id}/relations/{fk}':
+    get:
+      tags:
+        - tasks
+      summary: Find a related item by id for relations.
+      operationId: tasks.prototype.__findById__relations
+      parameters:
+        - name: fk
+          in: path
+          description: Foreign key for relations
+          required: true
+          type: string
+          format: JSON
+        - name: id
+          in: path
+          description: tasks id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/task_relations'
+      deprecated: false
+    delete:
+      tags:
+        - tasks
+      summary: Delete a related item by id for relations.
+      operationId: tasks.prototype.__destroyById__relations
+      parameters:
+        - name: fk
+          in: path
+          description: Foreign key for relations
+          required: true
+          type: string
+          format: JSON
+        - name: id
+          in: path
+          description: tasks id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '204':
+          description: Request was successful
+      deprecated: false
+    put:
+      tags:
+        - tasks
+      summary: Update a related item by id for relations.
+      operationId: tasks.prototype.__updateById__relations
+      parameters:
+        - name: fk
+          in: path
+          description: Foreign key for relations
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          required: false
+          schema:
+            $ref: '#/definitions/task_relations'
+        - name: id
+          in: path
+          description: tasks id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/task_relations'
+      deprecated: false
+  '/tasks/{id}/activityLogs/{fk}':
+    get:
+      tags:
+        - tasks
+      summary: Find a related item by id for activityLogs.
+      operationId: tasks.prototype.__findById__activityLogs
+      parameters:
+        - name: fk
+          in: path
+          description: Foreign key for activityLogs
+          required: true
+          type: string
+          format: JSON
+        - name: id
+          in: path
+          description: tasks id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/task_activity_log'
+      deprecated: false
+    delete:
+      tags:
+        - tasks
+      summary: Delete a related item by id for activityLogs.
+      operationId: tasks.prototype.__destroyById__activityLogs
+      parameters:
+        - name: fk
+          in: path
+          description: Foreign key for activityLogs
+          required: true
+          type: string
+          format: JSON
+        - name: id
+          in: path
+          description: tasks id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '204':
+          description: Request was successful
+      deprecated: false
+    put:
+      tags:
+        - tasks
+      summary: Update a related item by id for activityLogs.
+      operationId: tasks.prototype.__updateById__activityLogs
+      parameters:
+        - name: fk
+          in: path
+          description: Foreign key for activityLogs
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          required: false
+          schema:
+            $ref: '#/definitions/task_activity_log'
+        - name: id
+          in: path
+          description: tasks id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/task_activity_log'
+      deprecated: false
+  '/tasks/{id}/outputs':
+    get:
+      tags:
+        - tasks
+      summary: Queries outputs of tasks.
+      operationId: tasks.prototype.__get__outputs
+      parameters:
+        - name: filter
+          in: query
+          required: false
+          type: string
+          format: JSON
+        - name: id
+          in: path
+          description: tasks id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/task_outputs'
+      deprecated: false
+    post:
+      tags:
+        - tasks
+      summary: Creates a new instance in outputs of this model.
+      operationId: tasks.prototype.__create__outputs
+      parameters:
+        - name: data
+          in: body
+          required: false
+          schema:
+            $ref: '#/definitions/task_outputs'
+        - name: id
+          in: path
+          description: tasks id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/task_outputs'
+      deprecated: false
+    delete:
+      tags:
+        - tasks
+      summary: Deletes all outputs of this model.
+      operationId: tasks.prototype.__delete__outputs
+      parameters:
+        - name: id
+          in: path
+          description: tasks id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '204':
+          description: Request was successful
+      deprecated: false
+  '/tasks/{id}/outputs/count':
+    get:
+      tags:
+        - tasks
+      summary: Counts outputs of tasks.
+      operationId: tasks.prototype.__count__outputs
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: id
+          in: path
+          description: tasks id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              count:
+                type: number
+                format: double
+      deprecated: false
+  '/tasks/{id}/relations':
+    get:
+      tags:
+        - tasks
+      summary: Queries relations of tasks.
+      operationId: tasks.prototype.__get__relations
+      parameters:
+        - name: filter
+          in: query
+          required: false
+          type: string
+          format: JSON
+        - name: id
+          in: path
+          description: tasks id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/task_relations'
+      deprecated: false
+    post:
+      tags:
+        - tasks
+      summary: Creates a new instance in relations of this model.
+      operationId: tasks.prototype.__create__relations
+      parameters:
+        - name: data
+          in: body
+          required: false
+          schema:
+            $ref: '#/definitions/task_relations'
+        - name: id
+          in: path
+          description: tasks id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/task_relations'
+      deprecated: false
+    delete:
+      tags:
+        - tasks
+      summary: Deletes all relations of this model.
+      operationId: tasks.prototype.__delete__relations
+      parameters:
+        - name: id
+          in: path
+          description: tasks id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '204':
+          description: Request was successful
+      deprecated: false
+  '/tasks/{id}/relations/count':
+    get:
+      tags:
+        - tasks
+      summary: Counts relations of tasks.
+      operationId: tasks.prototype.__count__relations
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: id
+          in: path
+          description: tasks id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              count:
+                type: number
+                format: double
+      deprecated: false
+  '/tasks/{id}/activityLogs':
+    get:
+      tags:
+        - tasks
+      summary: Queries activityLogs of tasks.
+      operationId: tasks.prototype.__get__activityLogs
+      parameters:
+        - name: filter
+          in: query
+          required: false
+          type: string
+          format: JSON
+        - name: id
+          in: path
+          description: tasks id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/task_activity_log'
+      deprecated: false
+    post:
+      tags:
+        - tasks
+      summary: Creates a new instance in activityLogs of this model.
+      operationId: tasks.prototype.__create__activityLogs
+      parameters:
+        - name: data
+          in: body
+          required: false
+          schema:
+            $ref: '#/definitions/task_activity_log'
+        - name: id
+          in: path
+          description: tasks id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/task_activity_log'
+      deprecated: false
+    delete:
+      tags:
+        - tasks
+      summary: Deletes all activityLogs of this model.
+      operationId: tasks.prototype.__delete__activityLogs
+      parameters:
+        - name: id
+          in: path
+          description: tasks id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '204':
+          description: Request was successful
+      deprecated: false
+  '/tasks/{id}/activityLogs/count':
+    get:
+      tags:
+        - tasks
+      summary: Counts activityLogs of tasks.
+      operationId: tasks.prototype.__count__activityLogs
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: id
+          in: path
+          description: tasks id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              count:
+                type: number
+                format: double
+      deprecated: false
+  /tasks:
+    post:
+      tags:
+        - tasks
+      summary: Create a new instance of the model and persist it into the data source.
+      operationId: tasks.create
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/tasks'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/tasks'
+      deprecated: false
+    patch:
+      tags:
+        - tasks
+      summary: Patch an existing model instance or insert a new one into the data source.
+      operationId: tasks.patchOrCreate
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/tasks'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/tasks'
+      deprecated: false
+    put:
+      tags:
+        - tasks
+      summary: Replace an existing model instance or insert a new one into the data source.
+      operationId: tasks.replaceOrCreate__put_tasks
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/tasks'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/tasks'
+      deprecated: false
+    get:
+      tags:
+        - tasks
+      summary: Find all instances of the model matched by filter from the data source.
+      operationId: tasks.find
+      parameters:
+        - name: filter
+          in: query
+          description: 'Filter defining fields, where, include, order, offset, and limit - must be a JSON-encoded string ({"something":"value"})'
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/tasks'
+      deprecated: false
+  /tasks/replaceOrCreate:
+    post:
+      tags:
+        - tasks
+      summary: Replace an existing model instance or insert a new one into the data source.
+      operationId: tasks.replaceOrCreate__post_tasks_replaceOrCreate
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/tasks'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/tasks'
+      deprecated: false
+  /tasks/upsertWithWhere:
+    post:
+      tags:
+        - tasks
+      summary: Update an existing model instance or insert a new one into the data source based on the where criteria.
+      operationId: tasks.upsertWithWhere
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/tasks'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/tasks'
+      deprecated: false
+  '/tasks/{id}/exists':
+    get:
+      tags:
+        - tasks
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'tasks.exists__get_tasks_{id}_exists'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+  '/tasks/{id}':
+    head:
+      tags:
+        - tasks
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'tasks.exists__head_tasks_{id}'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+    get:
+      tags:
+        - tasks
+      summary: 'Find a model instance by {{id}} from the data source.'
+      operationId: tasks.findById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: filter
+          in: query
+          description: 'Filter defining fields and include - must be a JSON-encoded string ({"something":"value"})'
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/tasks'
+      deprecated: false
+    put:
+      tags:
+        - tasks
+      summary: Replace attributes for a model instance and persist it into the data source.
+      operationId: 'tasks.replaceById__put_tasks_{id}'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/tasks'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/tasks'
+      deprecated: false
+    delete:
+      tags:
+        - tasks
+      summary: 'Delete a model instance by {{id}} from the data source.'
+      operationId: tasks.deleteById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+      deprecated: false
+    patch:
+      tags:
+        - tasks
+      summary: Patch attributes for a model instance and persist it into the data source.
+      operationId: tasks.prototype.patchAttributes
+      parameters:
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/tasks'
+        - name: id
+          in: path
+          description: tasks id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/tasks'
+      deprecated: false
+  '/tasks/{id}/replace':
+    post:
+      tags:
+        - tasks
+      summary: Replace attributes for a model instance and persist it into the data source.
+      operationId: 'tasks.replaceById__post_tasks_{id}_replace'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/tasks'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/tasks'
+      deprecated: false
+  /tasks/findOne:
+    get:
+      tags:
+        - tasks
+      summary: Find first instance of the model matched by filter from the data source.
+      operationId: tasks.findOne
+      parameters:
+        - name: filter
+          in: query
+          description: 'Filter defining fields, where, include, order, offset, and limit - must be a JSON-encoded string ({"something":"value"})'
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/tasks'
+      deprecated: false
+  /tasks/update:
+    post:
+      tags:
+        - tasks
+      summary: 'Update instances of the model matched by {{where}} from the data source.'
+      operationId: tasks.updateAll
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/tasks'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            description: Information related to the outcome of the operation
+            type: object
+            properties:
+              count:
+                description: The number of instances updated
+                type: number
+                format: double
+      deprecated: false
+  /tasks/count:
+    get:
+      tags:
+        - tasks
+      summary: Count instances of the model matched by where from the data source.
+      operationId: tasks.count
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              count:
+                type: number
+                format: double
+      deprecated: false
+  /tasks/saveAll:
+    post:
+      tags:
+        - tasks
+      operationId: tasks.saveAll
+      parameters:
+        - name: task
+          in: body
+          required: false
+          schema:
+            type: object
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              task:
+                type: object
+      deprecated: false
+  /taskOutputs:
+    post:
+      tags:
+        - task_outputs
+      summary: Create a new instance of the model and persist it into the data source.
+      operationId: task_outputs.create
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/task_outputs'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/task_outputs'
+      deprecated: false
+    patch:
+      tags:
+        - task_outputs
+      summary: Patch an existing model instance or insert a new one into the data source.
+      operationId: task_outputs.patchOrCreate
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/task_outputs'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/task_outputs'
+      deprecated: false
+    put:
+      tags:
+        - task_outputs
+      summary: Replace an existing model instance or insert a new one into the data source.
+      operationId: task_outputs.replaceOrCreate__put_taskOutputs
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/task_outputs'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/task_outputs'
+      deprecated: false
+    get:
+      tags:
+        - task_outputs
+      summary: Find all instances of the model matched by filter from the data source.
+      operationId: task_outputs.find
+      parameters:
+        - name: filter
+          in: query
+          description: 'Filter defining fields, where, include, order, offset, and limit - must be a JSON-encoded string ({"something":"value"})'
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/task_outputs'
+      deprecated: false
+  /taskOutputs/replaceOrCreate:
+    post:
+      tags:
+        - task_outputs
+      summary: Replace an existing model instance or insert a new one into the data source.
+      operationId: task_outputs.replaceOrCreate__post_taskOutputs_replaceOrCreate
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/task_outputs'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/task_outputs'
+      deprecated: false
+  /taskOutputs/upsertWithWhere:
+    post:
+      tags:
+        - task_outputs
+      summary: Update an existing model instance or insert a new one into the data source based on the where criteria.
+      operationId: task_outputs.upsertWithWhere
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/task_outputs'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/task_outputs'
+      deprecated: false
+  '/taskOutputs/{id}/exists':
+    get:
+      tags:
+        - task_outputs
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'task_outputs.exists__get_taskOutputs_{id}_exists'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+  '/taskOutputs/{id}':
+    head:
+      tags:
+        - task_outputs
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'task_outputs.exists__head_taskOutputs_{id}'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+    get:
+      tags:
+        - task_outputs
+      summary: 'Find a model instance by {{id}} from the data source.'
+      operationId: task_outputs.findById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: filter
+          in: query
+          description: 'Filter defining fields and include - must be a JSON-encoded string ({"something":"value"})'
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/task_outputs'
+      deprecated: false
+    put:
+      tags:
+        - task_outputs
+      summary: Replace attributes for a model instance and persist it into the data source.
+      operationId: 'task_outputs.replaceById__put_taskOutputs_{id}'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/task_outputs'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/task_outputs'
+      deprecated: false
+    delete:
+      tags:
+        - task_outputs
+      summary: 'Delete a model instance by {{id}} from the data source.'
+      operationId: task_outputs.deleteById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+      deprecated: false
+    patch:
+      tags:
+        - task_outputs
+      summary: Patch attributes for a model instance and persist it into the data source.
+      operationId: task_outputs.prototype.patchAttributes
+      parameters:
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/task_outputs'
+        - name: id
+          in: path
+          description: task_outputs id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/task_outputs'
+      deprecated: false
+  '/taskOutputs/{id}/replace':
+    post:
+      tags:
+        - task_outputs
+      summary: Replace attributes for a model instance and persist it into the data source.
+      operationId: 'task_outputs.replaceById__post_taskOutputs_{id}_replace'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/task_outputs'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/task_outputs'
+      deprecated: false
+  /taskOutputs/findOne:
+    get:
+      tags:
+        - task_outputs
+      summary: Find first instance of the model matched by filter from the data source.
+      operationId: task_outputs.findOne
+      parameters:
+        - name: filter
+          in: query
+          description: 'Filter defining fields, where, include, order, offset, and limit - must be a JSON-encoded string ({"something":"value"})'
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/task_outputs'
+      deprecated: false
+  /taskOutputs/update:
+    post:
+      tags:
+        - task_outputs
+      summary: 'Update instances of the model matched by {{where}} from the data source.'
+      operationId: task_outputs.updateAll
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/task_outputs'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            description: Information related to the outcome of the operation
+            type: object
+            properties:
+              count:
+                description: The number of instances updated
+                type: number
+                format: double
+      deprecated: false
+  /taskOutputs/count:
+    get:
+      tags:
+        - task_outputs
+      summary: Count instances of the model matched by where from the data source.
+      operationId: task_outputs.count
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              count:
+                type: number
+                format: double
+      deprecated: false
+  /relations:
+    post:
+      tags:
+        - task_relations
+      summary: Create a new instance of the model and persist it into the data source.
+      operationId: task_relations.create
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/task_relations'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/task_relations'
+      deprecated: false
+    patch:
+      tags:
+        - task_relations
+      summary: Patch an existing model instance or insert a new one into the data source.
+      operationId: task_relations.patchOrCreate
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/task_relations'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/task_relations'
+      deprecated: false
+    put:
+      tags:
+        - task_relations
+      summary: Replace an existing model instance or insert a new one into the data source.
+      operationId: task_relations.replaceOrCreate__put_relations
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/task_relations'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/task_relations'
+      deprecated: false
+    get:
+      tags:
+        - task_relations
+      summary: Find all instances of the model matched by filter from the data source.
+      operationId: task_relations.find
+      parameters:
+        - name: filter
+          in: query
+          description: 'Filter defining fields, where, include, order, offset, and limit - must be a JSON-encoded string ({"something":"value"})'
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/task_relations'
+      deprecated: false
+  /relations/replaceOrCreate:
+    post:
+      tags:
+        - task_relations
+      summary: Replace an existing model instance or insert a new one into the data source.
+      operationId: task_relations.replaceOrCreate__post_relations_replaceOrCreate
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/task_relations'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/task_relations'
+      deprecated: false
+  /relations/upsertWithWhere:
+    post:
+      tags:
+        - task_relations
+      summary: Update an existing model instance or insert a new one into the data source based on the where criteria.
+      operationId: task_relations.upsertWithWhere
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/task_relations'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/task_relations'
+      deprecated: false
+  '/relations/{id}/exists':
+    get:
+      tags:
+        - task_relations
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'task_relations.exists__get_relations_{id}_exists'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+  '/relations/{id}':
+    head:
+      tags:
+        - task_relations
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'task_relations.exists__head_relations_{id}'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+    get:
+      tags:
+        - task_relations
+      summary: 'Find a model instance by {{id}} from the data source.'
+      operationId: task_relations.findById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: filter
+          in: query
+          description: 'Filter defining fields and include - must be a JSON-encoded string ({"something":"value"})'
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/task_relations'
+      deprecated: false
+    put:
+      tags:
+        - task_relations
+      summary: Replace attributes for a model instance and persist it into the data source.
+      operationId: 'task_relations.replaceById__put_relations_{id}'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/task_relations'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/task_relations'
+      deprecated: false
+    delete:
+      tags:
+        - task_relations
+      summary: 'Delete a model instance by {{id}} from the data source.'
+      operationId: task_relations.deleteById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+      deprecated: false
+    patch:
+      tags:
+        - task_relations
+      summary: Patch attributes for a model instance and persist it into the data source.
+      operationId: task_relations.prototype.patchAttributes
+      parameters:
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/task_relations'
+        - name: id
+          in: path
+          description: task_relations id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/task_relations'
+      deprecated: false
+  '/relations/{id}/replace':
+    post:
+      tags:
+        - task_relations
+      summary: Replace attributes for a model instance and persist it into the data source.
+      operationId: 'task_relations.replaceById__post_relations_{id}_replace'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/task_relations'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/task_relations'
+      deprecated: false
+  /relations/findOne:
+    get:
+      tags:
+        - task_relations
+      summary: Find first instance of the model matched by filter from the data source.
+      operationId: task_relations.findOne
+      parameters:
+        - name: filter
+          in: query
+          description: 'Filter defining fields, where, include, order, offset, and limit - must be a JSON-encoded string ({"something":"value"})'
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/task_relations'
+      deprecated: false
+  /relations/update:
+    post:
+      tags:
+        - task_relations
+      summary: 'Update instances of the model matched by {{where}} from the data source.'
+      operationId: task_relations.updateAll
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/task_relations'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            description: Information related to the outcome of the operation
+            type: object
+            properties:
+              count:
+                description: The number of instances updated
+                type: number
+                format: double
+      deprecated: false
+  /relations/count:
+    get:
+      tags:
+        - task_relations
+      summary: Count instances of the model matched by where from the data source.
+      operationId: task_relations.count
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              count:
+                type: number
+                format: double
+      deprecated: false
+  /activityLogs:
+    post:
+      tags:
+        - task_activity_log
+      summary: Create a new instance of the model and persist it into the data source.
+      operationId: task_activity_log.create
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/task_activity_log'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/task_activity_log'
+      deprecated: false
+    patch:
+      tags:
+        - task_activity_log
+      summary: Patch an existing model instance or insert a new one into the data source.
+      operationId: task_activity_log.patchOrCreate
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/task_activity_log'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/task_activity_log'
+      deprecated: false
+    put:
+      tags:
+        - task_activity_log
+      summary: Replace an existing model instance or insert a new one into the data source.
+      operationId: task_activity_log.replaceOrCreate__put_activityLogs
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/task_activity_log'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/task_activity_log'
+      deprecated: false
+    get:
+      tags:
+        - task_activity_log
+      summary: Find all instances of the model matched by filter from the data source.
+      operationId: task_activity_log.find
+      parameters:
+        - name: filter
+          in: query
+          description: 'Filter defining fields, where, include, order, offset, and limit - must be a JSON-encoded string ({"something":"value"})'
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/task_activity_log'
+      deprecated: false
+  /activityLogs/replaceOrCreate:
+    post:
+      tags:
+        - task_activity_log
+      summary: Replace an existing model instance or insert a new one into the data source.
+      operationId: task_activity_log.replaceOrCreate__post_activityLogs_replaceOrCreate
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/task_activity_log'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/task_activity_log'
+      deprecated: false
+  /activityLogs/upsertWithWhere:
+    post:
+      tags:
+        - task_activity_log
+      summary: Update an existing model instance or insert a new one into the data source based on the where criteria.
+      operationId: task_activity_log.upsertWithWhere
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/task_activity_log'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/task_activity_log'
+      deprecated: false
+  '/activityLogs/{id}/exists':
+    get:
+      tags:
+        - task_activity_log
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'task_activity_log.exists__get_activityLogs_{id}_exists'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+  '/activityLogs/{id}':
+    head:
+      tags:
+        - task_activity_log
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'task_activity_log.exists__head_activityLogs_{id}'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+    get:
+      tags:
+        - task_activity_log
+      summary: 'Find a model instance by {{id}} from the data source.'
+      operationId: task_activity_log.findById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: filter
+          in: query
+          description: 'Filter defining fields and include - must be a JSON-encoded string ({"something":"value"})'
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/task_activity_log'
+      deprecated: false
+    put:
+      tags:
+        - task_activity_log
+      summary: Replace attributes for a model instance and persist it into the data source.
+      operationId: 'task_activity_log.replaceById__put_activityLogs_{id}'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/task_activity_log'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/task_activity_log'
+      deprecated: false
+    delete:
+      tags:
+        - task_activity_log
+      summary: 'Delete a model instance by {{id}} from the data source.'
+      operationId: task_activity_log.deleteById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+      deprecated: false
+    patch:
+      tags:
+        - task_activity_log
+      summary: Patch attributes for a model instance and persist it into the data source.
+      operationId: task_activity_log.prototype.patchAttributes
+      parameters:
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/task_activity_log'
+        - name: id
+          in: path
+          description: task_activity_log id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/task_activity_log'
+      deprecated: false
+  '/activityLogs/{id}/replace':
+    post:
+      tags:
+        - task_activity_log
+      summary: Replace attributes for a model instance and persist it into the data source.
+      operationId: 'task_activity_log.replaceById__post_activityLogs_{id}_replace'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/task_activity_log'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/task_activity_log'
+      deprecated: false
+  /activityLogs/findOne:
+    get:
+      tags:
+        - task_activity_log
+      summary: Find first instance of the model matched by filter from the data source.
+      operationId: task_activity_log.findOne
+      parameters:
+        - name: filter
+          in: query
+          description: 'Filter defining fields, where, include, order, offset, and limit - must be a JSON-encoded string ({"something":"value"})'
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/task_activity_log'
+      deprecated: false
+  /activityLogs/update:
+    post:
+      tags:
+        - task_activity_log
+      summary: 'Update instances of the model matched by {{where}} from the data source.'
+      operationId: task_activity_log.updateAll
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/task_activity_log'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            description: Information related to the outcome of the operation
+            type: object
+            properties:
+              count:
+                description: The number of instances updated
+                type: number
+                format: double
+      deprecated: false
+  /activityLogs/count:
+    get:
+      tags:
+        - task_activity_log
+      summary: Count instances of the model matched by where from the data source.
+      operationId: task_activity_log.count
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              count:
+                type: number
+                format: double
+      deprecated: false
+  /templates:
+    post:
+      tags:
+        - task_templates
+      summary: Create a new instance of the model and persist it into the data source.
+      operationId: task_templates.create
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/task_templates'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/task_templates'
+      deprecated: false
+    patch:
+      tags:
+        - task_templates
+      summary: Patch an existing model instance or insert a new one into the data source.
+      operationId: task_templates.patchOrCreate
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/task_templates'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/task_templates'
+      deprecated: false
+    put:
+      tags:
+        - task_templates
+      summary: Replace an existing model instance or insert a new one into the data source.
+      operationId: task_templates.replaceOrCreate__put_templates
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/task_templates'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/task_templates'
+      deprecated: false
+    get:
+      tags:
+        - task_templates
+      summary: Find all instances of the model matched by filter from the data source.
+      operationId: task_templates.find
+      parameters:
+        - name: filter
+          in: query
+          description: 'Filter defining fields, where, include, order, offset, and limit - must be a JSON-encoded string ({"something":"value"})'
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/task_templates'
+      deprecated: false
+  /templates/replaceOrCreate:
+    post:
+      tags:
+        - task_templates
+      summary: Replace an existing model instance or insert a new one into the data source.
+      operationId: task_templates.replaceOrCreate__post_templates_replaceOrCreate
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/task_templates'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/task_templates'
+      deprecated: false
+  /templates/upsertWithWhere:
+    post:
+      tags:
+        - task_templates
+      summary: Update an existing model instance or insert a new one into the data source based on the where criteria.
+      operationId: task_templates.upsertWithWhere
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/task_templates'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/task_templates'
+      deprecated: false
+  '/templates/{id}/exists':
+    get:
+      tags:
+        - task_templates
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'task_templates.exists__get_templates_{id}_exists'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+  '/templates/{id}':
+    head:
+      tags:
+        - task_templates
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'task_templates.exists__head_templates_{id}'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+    get:
+      tags:
+        - task_templates
+      summary: 'Find a model instance by {{id}} from the data source.'
+      operationId: task_templates.findById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: filter
+          in: query
+          description: 'Filter defining fields and include - must be a JSON-encoded string ({"something":"value"})'
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/task_templates'
+      deprecated: false
+    put:
+      tags:
+        - task_templates
+      summary: Replace attributes for a model instance and persist it into the data source.
+      operationId: 'task_templates.replaceById__put_templates_{id}'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/task_templates'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/task_templates'
+      deprecated: false
+    delete:
+      tags:
+        - task_templates
+      summary: 'Delete a model instance by {{id}} from the data source.'
+      operationId: task_templates.deleteById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+      deprecated: false
+    patch:
+      tags:
+        - task_templates
+      summary: Patch attributes for a model instance and persist it into the data source.
+      operationId: task_templates.prototype.patchAttributes
+      parameters:
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/task_templates'
+        - name: id
+          in: path
+          description: task_templates id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/task_templates'
+      deprecated: false
+  '/templates/{id}/replace':
+    post:
+      tags:
+        - task_templates
+      summary: Replace attributes for a model instance and persist it into the data source.
+      operationId: 'task_templates.replaceById__post_templates_{id}_replace'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/task_templates'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/task_templates'
+      deprecated: false
+  /templates/findOne:
+    get:
+      tags:
+        - task_templates
+      summary: Find first instance of the model matched by filter from the data source.
+      operationId: task_templates.findOne
+      parameters:
+        - name: filter
+          in: query
+          description: 'Filter defining fields, where, include, order, offset, and limit - must be a JSON-encoded string ({"something":"value"})'
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/task_templates'
+      deprecated: false
+  /templates/update:
+    post:
+      tags:
+        - task_templates
+      summary: 'Update instances of the model matched by {{where}} from the data source.'
+      operationId: task_templates.updateAll
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/task_templates'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            description: Information related to the outcome of the operation
+            type: object
+            properties:
+              count:
+                description: The number of instances updated
+                type: number
+                format: double
+      deprecated: false
+  /templates/count:
+    get:
+      tags:
+        - task_templates
+      summary: Count instances of the model matched by where from the data source.
+      operationId: task_templates.count
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              count:
+                type: number
+                format: double
+      deprecated: false
+  /statusRules:
+    post:
+      tags:
+        - status_rules
+      summary: Create a new instance of the model and persist it into the data source.
+      operationId: status_rules.create
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/status_rules'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/status_rules'
+      deprecated: false
+    patch:
+      tags:
+        - status_rules
+      summary: Patch an existing model instance or insert a new one into the data source.
+      operationId: status_rules.patchOrCreate
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/status_rules'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/status_rules'
+      deprecated: false
+    put:
+      tags:
+        - status_rules
+      summary: Replace an existing model instance or insert a new one into the data source.
+      operationId: status_rules.replaceOrCreate__put_statusRules
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/status_rules'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/status_rules'
+      deprecated: false
+    get:
+      tags:
+        - status_rules
+      summary: Find all instances of the model matched by filter from the data source.
+      operationId: status_rules.find
+      parameters:
+        - name: filter
+          in: query
+          description: 'Filter defining fields, where, include, order, offset, and limit - must be a JSON-encoded string ({"something":"value"})'
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/status_rules'
+      deprecated: false
+  /statusRules/replaceOrCreate:
+    post:
+      tags:
+        - status_rules
+      summary: Replace an existing model instance or insert a new one into the data source.
+      operationId: status_rules.replaceOrCreate__post_statusRules_replaceOrCreate
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/status_rules'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/status_rules'
+      deprecated: false
+  /statusRules/upsertWithWhere:
+    post:
+      tags:
+        - status_rules
+      summary: Update an existing model instance or insert a new one into the data source based on the where criteria.
+      operationId: status_rules.upsertWithWhere
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/status_rules'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/status_rules'
+      deprecated: false
+  '/statusRules/{id}/exists':
+    get:
+      tags:
+        - status_rules
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'status_rules.exists__get_statusRules_{id}_exists'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+  '/statusRules/{id}':
+    head:
+      tags:
+        - status_rules
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'status_rules.exists__head_statusRules_{id}'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+    get:
+      tags:
+        - status_rules
+      summary: 'Find a model instance by {{id}} from the data source.'
+      operationId: status_rules.findById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: filter
+          in: query
+          description: 'Filter defining fields and include - must be a JSON-encoded string ({"something":"value"})'
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/status_rules'
+      deprecated: false
+    put:
+      tags:
+        - status_rules
+      summary: Replace attributes for a model instance and persist it into the data source.
+      operationId: 'status_rules.replaceById__put_statusRules_{id}'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/status_rules'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/status_rules'
+      deprecated: false
+    delete:
+      tags:
+        - status_rules
+      summary: 'Delete a model instance by {{id}} from the data source.'
+      operationId: status_rules.deleteById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+      deprecated: false
+    patch:
+      tags:
+        - status_rules
+      summary: Patch attributes for a model instance and persist it into the data source.
+      operationId: status_rules.prototype.patchAttributes
+      parameters:
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/status_rules'
+        - name: id
+          in: path
+          description: status_rules id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/status_rules'
+      deprecated: false
+  '/statusRules/{id}/replace':
+    post:
+      tags:
+        - status_rules
+      summary: Replace attributes for a model instance and persist it into the data source.
+      operationId: 'status_rules.replaceById__post_statusRules_{id}_replace'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/status_rules'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/status_rules'
+      deprecated: false
+  /statusRules/findOne:
+    get:
+      tags:
+        - status_rules
+      summary: Find first instance of the model matched by filter from the data source.
+      operationId: status_rules.findOne
+      parameters:
+        - name: filter
+          in: query
+          description: 'Filter defining fields, where, include, order, offset, and limit - must be a JSON-encoded string ({"something":"value"})'
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/status_rules'
+      deprecated: false
+  /statusRules/update:
+    post:
+      tags:
+        - status_rules
+      summary: 'Update instances of the model matched by {{where}} from the data source.'
+      operationId: status_rules.updateAll
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/status_rules'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            description: Information related to the outcome of the operation
+            type: object
+            properties:
+              count:
+                description: The number of instances updated
+                type: number
+                format: double
+      deprecated: false
+  /statusRules/count:
+    get:
+      tags:
+        - status_rules
+      summary: Count instances of the model matched by where from the data source.
+      operationId: status_rules.count
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              count:
+                type: number
+                format: double
+      deprecated: false
+  /auditLogs:
+    post:
+      tags:
+        - tasks_audit
+      summary: Create a new instance of the model and persist it into the data source.
+      operationId: tasks_audit.create
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/tasks_audit'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/tasks_audit'
+      deprecated: false
+    patch:
+      tags:
+        - tasks_audit
+      summary: Patch an existing model instance or insert a new one into the data source.
+      operationId: tasks_audit.patchOrCreate
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/tasks_audit'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/tasks_audit'
+      deprecated: false
+    put:
+      tags:
+        - tasks_audit
+      summary: Replace an existing model instance or insert a new one into the data source.
+      operationId: tasks_audit.replaceOrCreate__put_auditLogs
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/tasks_audit'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/tasks_audit'
+      deprecated: false
+    get:
+      tags:
+        - tasks_audit
+      summary: Find all instances of the model matched by filter from the data source.
+      operationId: tasks_audit.find
+      parameters:
+        - name: filter
+          in: query
+          description: 'Filter defining fields, where, include, order, offset, and limit - must be a JSON-encoded string ({"something":"value"})'
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/tasks_audit'
+      deprecated: false
+  /auditLogs/replaceOrCreate:
+    post:
+      tags:
+        - tasks_audit
+      summary: Replace an existing model instance or insert a new one into the data source.
+      operationId: tasks_audit.replaceOrCreate__post_auditLogs_replaceOrCreate
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/tasks_audit'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/tasks_audit'
+      deprecated: false
+  /auditLogs/upsertWithWhere:
+    post:
+      tags:
+        - tasks_audit
+      summary: Update an existing model instance or insert a new one into the data source based on the where criteria.
+      operationId: tasks_audit.upsertWithWhere
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/tasks_audit'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/tasks_audit'
+      deprecated: false
+  '/auditLogs/{id}/exists':
+    get:
+      tags:
+        - tasks_audit
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'tasks_audit.exists__get_auditLogs_{id}_exists'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+  '/auditLogs/{id}':
+    head:
+      tags:
+        - tasks_audit
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'tasks_audit.exists__head_auditLogs_{id}'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+    get:
+      tags:
+        - tasks_audit
+      summary: 'Find a model instance by {{id}} from the data source.'
+      operationId: tasks_audit.findById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: filter
+          in: query
+          description: 'Filter defining fields and include - must be a JSON-encoded string ({"something":"value"})'
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/tasks_audit'
+      deprecated: false
+    put:
+      tags:
+        - tasks_audit
+      summary: Replace attributes for a model instance and persist it into the data source.
+      operationId: 'tasks_audit.replaceById__put_auditLogs_{id}'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/tasks_audit'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/tasks_audit'
+      deprecated: false
+    delete:
+      tags:
+        - tasks_audit
+      summary: 'Delete a model instance by {{id}} from the data source.'
+      operationId: tasks_audit.deleteById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+      deprecated: false
+    patch:
+      tags:
+        - tasks_audit
+      summary: Patch attributes for a model instance and persist it into the data source.
+      operationId: tasks_audit.prototype.patchAttributes
+      parameters:
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/tasks_audit'
+        - name: id
+          in: path
+          description: tasks_audit id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/tasks_audit'
+      deprecated: false
+  '/auditLogs/{id}/replace':
+    post:
+      tags:
+        - tasks_audit
+      summary: Replace attributes for a model instance and persist it into the data source.
+      operationId: 'tasks_audit.replaceById__post_auditLogs_{id}_replace'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/tasks_audit'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/tasks_audit'
+      deprecated: false
+  /auditLogs/findOne:
+    get:
+      tags:
+        - tasks_audit
+      summary: Find first instance of the model matched by filter from the data source.
+      operationId: tasks_audit.findOne
+      parameters:
+        - name: filter
+          in: query
+          description: 'Filter defining fields, where, include, order, offset, and limit - must be a JSON-encoded string ({"something":"value"})'
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/tasks_audit'
+      deprecated: false
+  /auditLogs/update:
+    post:
+      tags:
+        - tasks_audit
+      summary: 'Update instances of the model matched by {{where}} from the data source.'
+      operationId: tasks_audit.updateAll
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/tasks_audit'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            description: Information related to the outcome of the operation
+            type: object
+            properties:
+              count:
+                description: The number of instances updated
+                type: number
+                format: double
+      deprecated: false
+  /auditLogs/count:
+    get:
+      tags:
+        - tasks_audit
+      summary: Count instances of the model matched by where from the data source.
+      operationId: tasks_audit.count
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              count:
+                type: number
+                format: double
+      deprecated: false
+definitions:
+  x-any:
+    properties: {}
+  task_outputs:
+    properties:
+      output_key:
+        type: string
+      output_value:
+        type: string
+      taskCode:
+        type: string
+      visibility:
+        type: number
+        format: double
+    required:
+      - output_key
+      - output_value
+      - taskCode
+    additionalProperties: false
+  task_relations:
+    properties:
+      related_item_type:
+        type: string
+      related_item_code:
+        type: string
+      taskCode:
+        type: string
+    required:
+      - related_item_type
+      - related_item_code
+      - taskCode
+    additionalProperties: false
+  task_activity_log:
+    properties:
+      activityType:
+        type: number
+        format: double
+      createdDate:
+        type: string
+        format: date-time
+      createdBy:
+        type: string
+      taskCode:
+        type: string
+      description:
+        type: string
+    required:
+      - taskCode
+      - description
+    additionalProperties: false
+  tasks:
+    properties:
+      assignedTo:
+        type: number
+        format: double
+      assignedToGroup:
+        type: number
+        format: double
+      crearedBy:
+        type: string
+      createdDate:
+        type: string
+        format: date-time
+      description:
+        type: string
+      dueDate:
+        type: string
+        format: date-time
+      lastModificationDate:
+        type: string
+        format: date-time
+      modifiedBy:
+        type: string
+      sequenceNumber:
+        type: number
+        format: double
+      sequenceType:
+        type: string
+      startDate:
+        type: string
+        format: date-time
+      statusId:
+        type: number
+        format: double
+      taskCode:
+        type: string
+      workItemId:
+        type: number
+        format: double
+    required:
+      - description
+      - sequenceNumber
+      - sequenceType
+      - taskCode
+    additionalProperties: false
+  task_templates:
+    properties:
+      assignedTo:
+        type: number
+        format: double
+      assignedToGroup:
+        type: number
+        format: double
+      description:
+        type: string
+      name:
+        type: string
+      sequenceNumber:
+        type: number
+        format: double
+      sequenceType:
+        type: string
+    required:
+      - description
+      - name
+      - sequenceNumber
+      - sequenceType
+    additionalProperties: false
+  status_rules:
+    properties:
+      current_status:
+        type: number
+        format: double
+      next_status:
+        type: number
+        format: double
+    required:
+      - current_status
+    additionalProperties: false
+  tasks_audit:
+    properties:
+      keyValue:
+        type: string
+      fieldName:
+        type: string
+      oldValue:
+        type: string
+      newValue:
+        type: string
+      updatedBy:
+        type: string
+      updatedOn:
+        type: string
+        format: date-time
+    required:
+      - keyValue
+    additionalProperties: false
+basePath: /api
+swagger: '2.0'
+info:
+  x-ibm-name: tasksrest
+  version: 1.0.0
+  title: tasksrest
+schemes:
+  - https
+host: $(catalog.host)
+consumes:
+  - application/json
+produces:
+  - application/json
+securityDefinitions:
+  clientIdHeader:
+    type: apiKey
+    in: header
+    name: X-IBM-Client-Id
+  clientSecretHeader:
+    in: header
+    name: X-IBM-Client-Secret
+    type: apiKey
+security:
+  - clientIdHeader: []
+    clientSecretHeader: []
+x-ibm-configuration:
+  testable: true
+  enforced: true
+  cors:
+    enabled: true
+  catalogs:
+    apic-dev:
+      properties:
+        runtime-url: 'https://tasksrestnew.mybluemix.net'
+    sb:
+      properties:
+        runtime-url: 'https://tasksrestnew.mybluemix.net'
+        invoke-tls-profile: 'client:Loopback-client'
+  assembly:
+    execute:
+      - switch:
+          title: switch
+          case:
+            - condition: "apim.getvariable('request.verb') == 'GET'"
+              execute:
+                - invoke:
+                    title: invoke
+                    timeout: 60
+                    verb: GET
+                    cache-response: protocol
+                    cache-ttl: 900
+                    stop-on-error:
+                      - null
+                    version: 1.0.0
+                    target-url: $(runtime-url)$(request.path)$(request.search)
+                    tls-profile: $(invoke-tls-profile)
+            - condition: "apim.getvariable('request.verb') == 'POST'"
+              execute:
+                - invoke:
+                    title: invoke
+                    timeout: 60
+                    verb: POST
+                    cache-response: protocol
+                    cache-ttl: 900
+                    stop-on-error:
+                      - null
+                    version: 1.0.0
+                    target-url: $(runtime-url)$(request.path)$(request.search)
+            - condition: "apim.getvariable('request.verb') == 'PUT'"
+              execute:
+                - invoke:
+                    title: invoke
+                    timeout: 60
+                    verb: PUT
+                    cache-response: protocol
+                    cache-ttl: 900
+                    stop-on-error:
+                      - null
+                    version: 1.0.0
+                    target-url: $(runtime-url)$(request.path)$(request.search)
+            - condition: "apim.getvariable('request.verb') == 'PATCH'"
+              execute:
+                - invoke:
+                    title: invoke
+                    timeout: 60
+                    verb: PATCH
+                    cache-response: protocol
+                    cache-ttl: 900
+                    stop-on-error:
+                      - null
+                    version: 1.0.0
+                    target-url: $(runtime-url)$(request.path)$(request.search)
+          version: 1.0.0
+    catch: []

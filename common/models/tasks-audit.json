@@ -1,0 +1,62 @@
+{
+  "name": "tasks_audit",
+  "plural": "auditLogs",
+  "base": "PersistedModel",
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "dashdb": {
+    "schema": "BLUADMIN",
+    "table": "TASKS_AUDIT"
+  },
+  "properties": {
+    "keyValue": {
+      "type": "string",
+	  "id": true,
+      "required": true,
+      "dashdb": {
+        "columnName": "KEYVALUE"
+      }
+    },
+    "fieldName": {
+      "type": "string",
+	  "required": false,
+      "dashdb": {
+        "columnName": "FIELDNAME"
+      }
+    },
+    "oldValue": {
+      "type": "string",
+	  "required": false,
+      "dashdb": {
+        "columnName": "OLDVALUE"
+      }
+    },
+    "newValue": {
+      "type": "string",
+	  "required": false,
+      "dashdb": {
+        "columnName": "NEWVALUE"
+      }
+    },
+    "updatedBy": {
+      "type": "string",
+	  "required": false,
+      "dashdb": {
+        "columnName": "UPDATEDBY"
+      }
+    },
+    "updatedOn": {
+      "type": "date",
+	  "required": false,
+      "dashdb": {
+        "columnName": "UPDATEDON"
+      }
+    }  
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

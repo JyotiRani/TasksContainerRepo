@@ -36,5 +36,9 @@
   "status_rules": {
     "dataSource": "tasks",
     "public": true
+  },
+  "tasks_audit": {
+    "dataSource": "tasks",
+    "public": true
   }
 }
