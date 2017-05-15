@@ -1,5 +1,6 @@
 FROM node
-COPY .* .
+COPY .* /node
+WORKDIR /node
 RUN npm install
 EXPOSE  8081
-CMD node server/server.js
+CMD node /node/server/server.js
