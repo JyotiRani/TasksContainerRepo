@@ -1,5 +1,5 @@
 FROM node
-COPY .* /node
+ADD . /node
 WORKDIR /node
 RUN npm install
 EXPOSE  8081
